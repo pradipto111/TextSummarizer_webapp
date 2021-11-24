@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../static/css/index.css">
+        <title>Summarizer.ai</title>
+        <!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+           <div class="heading heading-summary">
+            <h1 class="display-2 text-center heading-summary-2">summarizer.ai</h1>
+        </div>
+
+      
+          <div id="summary">
+            <div class="header-summary">{{method}}</div>
+            <div class="para-summary">{{summary}}</div>
+            <div class="button-summary">
+              <form method="get" action="/">
+                <button type="submit" class="button">summarise again &rarr;</button>
+              </form>
+            </div>
+          </div>
+    </body>
+
+</html>

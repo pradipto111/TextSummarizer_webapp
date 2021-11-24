@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../static/css/index.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- Google Fonts -->
+        <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Lato&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tinos:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <title>Summarizer.ai</title>
+    </head>
+    <body>
+          <div class="heading">
+            <h1 class="display-2 text-center">summarizer.ai</h1>
+        </div>
+
+          <div id="form-id">
+            <form action="/form" method="post" id="usrform">
+                <textarea type="text" rows="5" name="input_text" form="usrform" placeholder="Enter text here"></textarea>
+                <label for="methods">Choose a summarizer method:</label>
+                <select id="methods" name="methods" class="choose-method" aria-label="Default select example " width="10rem">
+                    <option value="textrank">TextRank method</option>
+                    <option value="luhn">Luhn Summarizer</option>
+                    <option value="klsum">KL-Sum method</option>
+                    <option value="tfidf">TF-IDF method</option>
+                </select>
+                <br> <div class="sentence-asker-div">
+                <label for="num">No. of sentences in summary: </label>
+                <!-- <div class="slider-div">
+                <input type="range" id="num" name="num" min="1" max="10" class="slider"> </div> -->
+                <div class="slider-div">
+        <span id="rangeValue">5</span>
+        <Input id="num" class="range" type="range" name="num" value="5" min="1" max="10" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)"></Input>
+    </div></div>
+    <script type="text/javascript">
+        function rangeSlide(value) {
+            document.getElementById('rangeValue').innerHTML = value;
+        }
+    </script>
+                <!-- <div class="submit-button button__mask button__text button__text--bis"> -->
+            <!-- <button type="submit" value="Summarise"></input> -->
+              <div class="button-div">
+              <button type="submit" class="button">summarise.</button>
+            <!-- </div> --></div>
+            
+            </form>
+          </div>
+    </body>
+
+</html>
